@@ -8,8 +8,8 @@ const RoomSchema= new mongoose.Schema({
     price:{
         type:Number,
         required:true,
-    },
     
+    }, 
     
     desc:{
         type:String,
