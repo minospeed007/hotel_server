@@ -29,8 +29,11 @@ mongoose.connection.on("disconnected", ()=>{
 
 
 
-//middleware
-app.use(cors({  credentials: true, origin: ["http://localhost:3000"," https://hotel-af677.web.app"],methods:["GET","POST","DELETE","PUT"]}))
+//middleware   origin: ['http://localhost:3000', 'https://hotel-af677.web.app'],
+
+app.use(cors({  credentials: true, 
+    origin: process.env.CLIENT_ORIGIN,
+    methods:["GET","POST","DELETE","PUT"]}))
 
 app.use(express.json())
 app.use(cookieParser())
