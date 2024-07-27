@@ -38,6 +38,8 @@ export const getHotel= async (req,res,next)=>{
 }
 export const countByCity= async (req,res,next)=>{
     const cities=req.query.cities.split(',')
+    console.log('City:', req.url);
+
     try{
         const list=await Promise.all(cities.map(city=>{
           return Hotel.countDocuments({city:city})  
@@ -49,6 +51,8 @@ export const countByCity= async (req,res,next)=>{
         }
 }
 export const getHotels = async (req, res, next) => {
+  console.log('Featured:', req.url);
+
         try {
           const { featured, limit, min, max } = req.query;
       
