@@ -29,7 +29,7 @@ mongoose.connection.on("disconnected", ()=>{
 
 
 
-//middleware   origin: ['http://localhost:3000', 'https://hotel-af677.web.app'],
+//middleware   origin: ['http://localhost:3000', 'https://hotel-af677.web.app', 'https://admin-96uj.onrender.com'],
 
 app.use(cors({  credentials: true, 
     origin: process.env.CLIENT_ORIGIN,
